@@ -34,7 +34,11 @@
 
             ent[1] = isNaN(ent[1]) ? '00' : ent[1];
 
-            return numero + " con " + ent[1] + "/100";
+            if (ent[1].length == 1) {
+                return numero + " con " + ent[1] + "0/100";
+            }
+
+            return numero + " con " + (ent[1].substr(0,2)) + "/100";
         }
     }
 

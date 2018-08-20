@@ -212,7 +212,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
     if (indice_cuotas == 3) {
         opcion_3_Cuotas = "&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;";
 
-        var cuota_soles = calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],3).toFixed(2);
+        var cuota_soles = calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],3);
 
         opcion_3_Cuotas_soles = "&nbsp;&nbsp;" + cuota_soles + "&nbsp;&nbsp;";
     }
@@ -345,12 +345,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + document.getElementById("duracion").value + "</u>_ año(s), iniciando el "
                         + " " + getDia(document.getElementById("fecha").value) + "/" 
                         +  getMes(document.getElementById("fecha").value) + "/"  
-                        +  getAnio(document.getElementById("fecha").value) +   
-                        + " "
-
-
-                        + " hasta el " + fecha_fin_data
-
+                        +  getAnio(document.getElementById("fecha").value) + " hasta el " + fecha_fin_data
 
                         + ", fecha pactada con EL AFILIADO, Ribera del Río Club Resort, no se hace responsable por el tiempo que EL AFILIADO no haga uso del Club y sus beneficios, durante la vigencia de la Membresía.</p>"
                         + "<div style='font-size: 11pt;'><b><u>TERCERO: Valor y Forma de Pago.</u></b></div>"
@@ -2369,12 +2364,8 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + document.getElementById("duracion").value + "</u>_ año(s), iniciando el "
                         + getDia(document.getElementById("fecha").value) + "/" 
                         +  getMes(document.getElementById("fecha").value) + "/"  
-                        +  getAnio(document.getElementById("fecha").value) +
-
-
-                        + " hasta el " + fecha_fin_data
-
-
+                        +  getAnio(document.getElementById("fecha").value) + " hasta el " + fecha_fin_data
+                            
                         + ", fecha pactada con EL AFILIADO, Ribera del Río Club Resort, no se hace responsable por el tiempo que EL AFILIADO no haga uso del Club y sus beneficios, durante la vigencia de la Membresía.</p>"
                         + "<div style='font-size: 11pt;'><b><u>TERCERO: Valor y Forma de Pago.</u></b></div>"
 
@@ -5814,7 +5805,7 @@ word = "<html "
         + " SOLES </b> (S/ <b><u>&nbsp;" 
         + parseFloat(array_pagares[i] * parseFloat(document.getElementById('tipo_cambio').value)).toFixed(2)
         + "&nbsp;</u></b>) pagadero en <b>"
-        + parseFloat(array_pagares_cuotas[i]).toFixed(2)
+        + array_pagares_cuotas[i].toString()
         + "</b> cuotas mensuales y consecutivas con vencimiento la primera de ella el día <b>"
         + dateLarge(array_pagares_fechas[i])
         + "</b> , por valor de (S/. <b><u>&nbsp;"
@@ -5938,6 +5929,12 @@ function dateLarge(date){
     var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
     var f=new Date(date);
     return ((getDia(f)) + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+}
+
+
+function cortarDecimales(num){
+    var de_array = num.split('.');
+    return (de_array[0].toString() + "." + de_array[1].toString().substr(0,2));
 }
 
 
