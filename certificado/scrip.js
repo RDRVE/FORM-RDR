@@ -144,11 +144,11 @@ document.getElementById('btnPrestacionSer').onclick = function() {
     var opcion_18_Cuotas = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
     var opcion_24_Cuotas = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
-    var opcion_3_Cuotas_soles = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-    var opcion_6_Cuotas_soles = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-    var opcion_12_Cuotas_soles = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-    var opcion_18_Cuotas_soles = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-    var opcion_24_Cuotas_soles = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+    var opcion_3_Cuotas_soles = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+    var opcion_6_Cuotas_soles = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+    var opcion_12_Cuotas_soles = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+    var opcion_18_Cuotas_soles = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+    var opcion_24_Cuotas_soles = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
 /*
     var minum_cuotas = document.getElementById("num_cuotas");
@@ -211,17 +211,17 @@ document.getElementById('btnPrestacionSer').onclick = function() {
 
 
     if (indice_cuotas == 0) {
-        opcion_contado = "&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;";
+        opcion_contado = "&nbsp;&nbsp;X&nbsp;&nbsp;";
     }
     if (indice_cuotas == 3) {
-        opcion_3_Cuotas = "&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;";
+        opcion_3_Cuotas = "&nbsp;&nbsp;X&nbsp;&nbsp;";
 
         var cuota_soles = BorrarDecimal(calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],3)).toFixed(2);
 
         opcion_3_Cuotas_soles = "&nbsp;&nbsp;" + cuota_soles + "&nbsp;&nbsp;";
     }
     if (indice_cuotas == 6) {
-        opcion_6_Cuotas = "&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;";
+        opcion_6_Cuotas = "&nbsp;&nbsp;X&nbsp;&nbsp;";
 
         var cuota_soles = BorrarDecimal(calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],6)).toFixed(2);
 
@@ -229,7 +229,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
         opcion_6_Cuotas_soles = "&nbsp;&nbsp;" + cuota_soles + "&nbsp;&nbsp;";
     }
     if (indice_cuotas == 12) {
-        opcion_12_Cuotas = "&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;";
+        opcion_12_Cuotas = "&nbsp;&nbsp;X&nbsp;&nbsp;";
 
         var cuota_soles = BorrarDecimal(calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],12)).toFixed(2);
 
@@ -237,7 +237,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
         opcion_12_Cuotas_soles = "&nbsp;&nbsp;" + cuota_soles + "&nbsp;&nbsp;";
     }
     if (indice_cuotas == 18) {
-        opcion_18_Cuotas = "&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;";
+        opcion_18_Cuotas = "&nbsp;&nbsp;X&nbsp;&nbsp;";
 
         var cuota_soles = BorrarDecimal(calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],18)).toFixed(2);
 
@@ -245,7 +245,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
         opcion_18_Cuotas_soles = "&nbsp;&nbsp;" + cuota_soles + "&nbsp;&nbsp;";
     }
     if (indice_cuotas == 24) {
-        opcion_24_Cuotas = "&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;";
+        opcion_24_Cuotas = "&nbsp;&nbsp;X&nbsp;&nbsp;";
 
         var cuota_soles = BorrarDecimal(calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],24)).toFixed(2);
 
@@ -370,9 +370,9 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
                         + document.getElementById('max_financiamiento_porcentaje').value 
                         + "&nbsp;</u> %   del valor de su membresía:</p>"
-                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09; <u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
+                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09;&#09;<u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_3_Cuotas + "</u> 3 Cuotas - Cada cuota de    (S/.<u>" + opcion_3_Cuotas_soles + "</u>)  &#09;<u>" + opcion_18_Cuotas +"</u> 18 Cuotas - Cada cuota de  (S/.<u>" + opcion_18_Cuotas_soles + "</u>)</div>"
-                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09; <u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
+                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09;<u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
                         + "<br/><br/><br/><br/><br /><br />"
                         + "<small>&nbsp;</small>"
                         + "<div style='font-size:14pt;text-align:justify;'><b>&#09;-  Cuenta Corriente Soles BCP - Cuota Inicial      &#09; &#09;192-2459697-0-22"
@@ -1038,9 +1038,9 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
                         + document.getElementById('max_financiamiento_porcentaje').value 
                         + "&nbsp;</u> %   del valor de su membresía:</p>"
-                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09; <u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
+                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09;&#09;<u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_3_Cuotas + "</u> 3 Cuotas - Cada cuota de    (S/.<u>" + opcion_3_Cuotas_soles + "</u>)  &#09;<u>" + opcion_18_Cuotas +"</u> 18 Cuotas - Cada cuota de  (S/.<u>" + opcion_18_Cuotas_soles + "</u>)</div>"
-                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09; <u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
+                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09;<u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
                         + "<br/><br/><br/><br/><br /><br />"
                         + "<small>&nbsp;</small>"
 
@@ -1713,9 +1713,9 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
                         + document.getElementById('max_financiamiento_porcentaje').value 
                         + "&nbsp;</u> %   del valor de su membresía:</p>"
-                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09; <u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
+                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09;&#09;<u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_3_Cuotas + "</u> 3 Cuotas - Cada cuota de    (S/.<u>" + opcion_3_Cuotas_soles + "</u>)  &#09;<u>" + opcion_18_Cuotas +"</u> 18 Cuotas - Cada cuota de  (S/.<u>" + opcion_18_Cuotas_soles + "</u>)</div>"
-                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09; <u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
+                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09;<u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
                         + "<br/><br/><br/><br/><br /><br />"
                         + "<small>&nbsp;</small>"
                         + "<div style='font-size:14pt;text-align:justify;'><b>&#09;-  Cuenta Corriente Soles BCP - Cuota Inicial      &#09; &#09;192-2459697-0-22"
@@ -2389,9 +2389,9 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
                         + document.getElementById('max_financiamiento_porcentaje').value 
                         + "&nbsp;</u> %   del valor de su membresía:</p>"
-                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09; <u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
+                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09;&#09;<u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_3_Cuotas + "</u> 3 Cuotas - Cada cuota de    (S/.<u>" + opcion_3_Cuotas_soles + "</u>)  &#09;<u>" + opcion_18_Cuotas +"</u> 18 Cuotas - Cada cuota de  (S/.<u>" + opcion_18_Cuotas_soles + "</u>)</div>"
-                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09; <u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
+                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09;<u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
                         + "<br/><br/><br/><br/><br /><br />"
                         + "<small>&nbsp;</small>"
                         + "<div style='font-size:14pt;text-align:justify;'><b>&#09;-  Cuenta Corriente Soles BCP - Cuota Inicial      &#09; &#09;192-2459697-0-22"
@@ -3056,9 +3056,9 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
                         + document.getElementById('max_financiamiento_porcentaje').value 
                         + "&nbsp;</u> %   del valor de su membresía:</p>"
-                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09; <u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
+                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09;&#09;<u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_3_Cuotas + "</u> 3 Cuotas - Cada cuota de    (S/.<u>" + opcion_3_Cuotas_soles + "</u>)  &#09;<u>" + opcion_18_Cuotas +"</u> 18 Cuotas - Cada cuota de  (S/.<u>" + opcion_18_Cuotas_soles + "</u>)</div>"
-                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09; <u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
+                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09;<u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
                         + "<br/><br/><br/><br/><br /><br />"
                         + "<small>&nbsp;</small>"
                         + "<div style='font-size:14pt;text-align:justify;'><b>&#09;-  Cuenta Corriente Soles BCP - Cuota Inicial      &#09; &#09;192-2459697-0-22"
@@ -3719,9 +3719,9 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
                         + document.getElementById('max_financiamiento_porcentaje').value 
                         + "&nbsp;</u> %   del valor de su membresía:</p>"
-                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09; <u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
+                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09;&#09;<u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_3_Cuotas + "</u> 3 Cuotas - Cada cuota de    (S/.<u>" + opcion_3_Cuotas_soles + "</u>)  &#09;<u>" + opcion_18_Cuotas +"</u> 18 Cuotas - Cada cuota de  (S/.<u>" + opcion_18_Cuotas_soles + "</u>)</div>"
-                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09; <u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
+                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09;<u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
                         + "<br/><br/><br/><br/><br />"
                         + "<small>&nbsp;</small>"
                         + "<div style='font-size:14pt;text-align:justify;'><b>&#09;-  Cuenta Corriente Soles BCP - Cuota Inicial      &#09; &#09;192-2459697-0-22"
@@ -4387,7 +4387,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
                         + document.getElementById('max_financiamiento_porcentaje').value 
                         + "&nbsp;</u> %   del valor de su membresía:</p>"
-                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09; <u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
+                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09;&#09;<u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_3_Cuotas + "</u> 3 Cuotas - Cada cuota de    (S/.<u>" + opcion_3_Cuotas_soles + "</u>)  &#09;<u>" + opcion_18_Cuotas +"</u> 18 Cuotas - Cada cuota de  (S/.<u>" + opcion_18_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09; <u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
                         + "<br/><br/><br/><br/><br /><br />"
@@ -5058,9 +5058,9 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
                         + document.getElementById('max_financiamiento_porcentaje').value 
                         + "&nbsp;</u> %   del valor de su membresía:</p>"
-                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09; <u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
+                        + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09;&#09;<u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_3_Cuotas + "</u> 3 Cuotas - Cada cuota de    (S/.<u>" + opcion_3_Cuotas_soles + "</u>)  &#09;<u>" + opcion_18_Cuotas +"</u> 18 Cuotas - Cada cuota de  (S/.<u>" + opcion_18_Cuotas_soles + "</u>)</div>"
-                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09; <u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
+                        + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09;<u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
                         + "<br/><br/><br/><br/><br /><br>"
                         + "<br><br>"
                         + "<div style='font-size:14pt;text-align:justify;'><b>&#09;-  Cuenta Corriente Soles BCP - Cuota Inicial      &#09; &#09;192-2459697-0-22"
