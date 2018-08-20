@@ -12,7 +12,11 @@ var rtp;
 var div = document.getElementById("list_eneficiarios");
     div.style.display = "none";
 
+function BorrarDecimal(num){
+    var resul = (parseInt(num * 100) / 100);
 
+    return resul;
+}
 
 
 function isEmpty(str) {
@@ -212,14 +216,14 @@ document.getElementById('btnPrestacionSer').onclick = function() {
     if (indice_cuotas == 3) {
         opcion_3_Cuotas = "&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;";
 
-        var cuota_soles = calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],3);
+        var cuota_soles = BorrarDecimal(calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],3)).toFixed(2);
 
         opcion_3_Cuotas_soles = "&nbsp;&nbsp;" + cuota_soles + "&nbsp;&nbsp;";
     }
     if (indice_cuotas == 6) {
         opcion_6_Cuotas = "&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;";
 
-        var cuota_soles = calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],6).toFixed(2);
+        var cuota_soles = BorrarDecimal(calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],6)).toFixed(2);
 
 
         opcion_6_Cuotas_soles = "&nbsp;&nbsp;" + cuota_soles + "&nbsp;&nbsp;";
@@ -227,7 +231,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
     if (indice_cuotas == 12) {
         opcion_12_Cuotas = "&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;";
 
-        var cuota_soles = calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],12).toFixed(2);
+        var cuota_soles = BorrarDecimal(calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],12)).toFixed(2);
 
 
         opcion_12_Cuotas_soles = "&nbsp;&nbsp;" + cuota_soles + "&nbsp;&nbsp;";
@@ -235,7 +239,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
     if (indice_cuotas == 18) {
         opcion_18_Cuotas = "&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;";
 
-        var cuota_soles = calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],18).toFixed(2);
+        var cuota_soles = BorrarDecimal(calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],18)).toFixed(2);
 
 
         opcion_18_Cuotas_soles = "&nbsp;&nbsp;" + cuota_soles + "&nbsp;&nbsp;";
@@ -243,7 +247,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
     if (indice_cuotas == 24) {
         opcion_24_Cuotas = "&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;";
 
-        var cuota_soles = calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],24).toFixed(2);
+        var cuota_soles = BorrarDecimal(calcularCuotaMensual(array_pagares[array_pagares.length -1],array_tasa_anual[array_tasa_anual.length -1],24)).toFixed(2);
 
 
         opcion_24_Cuotas_soles = "&nbsp;&nbsp;" + cuota_soles + "&nbsp;&nbsp;";
@@ -354,13 +358,13 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + " <b>" 
                         + NumerosaLetras(document.getElementById("monto_dolares").value)
                         + " &nbsp;DOLARES</b> ($<u>" 
-                        + parseFloat(document.getElementById('monto_dolares').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_dolares').value)).toFixed(2) 
                         + "</u>) los cuales al tipo de cambio del día <u>" 
                         + document.getElementById('tipo_cambio').value + "</u>, serian <b>" 
                         + NumerosaLetras(document.getElementById("monto_soles").value) 
                         + " SOLES</b> (S/. "
                         + " <u>" 
-                        + parseFloat(document.getElementById('monto_soles').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_soles').value)).toFixed(2) 
                         + "</u>). Este pago le confiere el derecho al uso de las instalaciones de Ribera del Río Club Resort bajo los términos y condiciones establecidas en el presente documento.</p>" 
                         + "<h4><u>CUARTO: Financiamiento.</u></h4>"
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
@@ -1022,13 +1026,13 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + " <b>" 
                         + NumerosaLetras(document.getElementById("monto_dolares").value)
                         + " &nbsp;DOLARES</b> ($<u>" 
-                        + parseFloat(document.getElementById('monto_dolares').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_dolares').value)).toFixed(2) 
                         + "</u>) los cuales al tipo de cambio del día <u>" 
                         + document.getElementById('tipo_cambio').value + "</u>, serian <b>" 
                         + NumerosaLetras(document.getElementById("monto_soles").value) 
                         + " SOLES</b> (S/. "
                         + " <u>" 
-                        + parseFloat(document.getElementById('monto_soles').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_soles').value)).toFixed(2) 
                         + "</u>). Este pago le confiere el derecho al uso de las instalaciones de Ribera del Río Club Resort bajo los términos y condiciones establecidas en el presente documento.</p>" 
                         + "<h4><u>CUARTO: Financiamiento.</u></h4>"
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
@@ -1697,13 +1701,13 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + " <b>" 
                         + NumerosaLetras(document.getElementById("monto_dolares").value)
                         + " &nbsp;DOLARES</b> ($<u>" 
-                        + parseFloat(document.getElementById('monto_dolares').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_dolares').value)).toFixed(2) 
                         + "</u>) los cuales al tipo de cambio del día <u>" 
                         + document.getElementById('tipo_cambio').value + "</u>, serian <b>" 
                         + NumerosaLetras(document.getElementById("monto_soles").value) 
                         + " Soles</b> (S/. "
                         + " <u>" 
-                        + parseFloat(document.getElementById('monto_soles').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_soles').value)).toFixed(2) 
                         + "</u>). Este pago le confiere el derecho al uso de las instalaciones de Ribera del Río Club Resort bajo los términos y condiciones establecidas en el presente documento.</p>" 
                         + "<h4><u>CUARTO: Financiamiento.</u></h4>"
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
@@ -2373,13 +2377,13 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + " <b>" 
                         + NumerosaLetras(document.getElementById("monto_dolares").value)
                         + " &nbsp;DOLARES</b> ($<u>" 
-                        + parseFloat(document.getElementById('monto_dolares').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_dolares').value)).toFixed(2) 
                         + "</u>) los cuales al tipo de cambio del día <u>" 
                         + document.getElementById('tipo_cambio').value + "</u>, serian <b>" 
                         + NumerosaLetras(document.getElementById("monto_soles").value) 
                         + " SOLES</b> (S/. "
                         + " <u>" 
-                        + parseFloat(document.getElementById('monto_soles').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_soles').value)).toFixed(2) 
                         + "</u>). Este pago le confiere el derecho al uso de las instalaciones de Ribera del Río Club Resort bajo los términos y condiciones establecidas en el presente documento.</p>" 
                         + "<h4><u>CUARTO: Financiamiento.</u></h4>"
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
@@ -3040,13 +3044,13 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + " <b>" 
                         + NumerosaLetras(document.getElementById("monto_dolares").value)
                         + " &nbsp;DOLARES</b> ($<u>" 
-                        + parseFloat(document.getElementById('monto_dolares').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_dolares').value)).toFixed(2) 
                         + "</u>) los cuales al tipo de cambio del día <u>" 
                         + document.getElementById('tipo_cambio').value + "</u>, serian <b>" 
                         + NumerosaLetras(document.getElementById("monto_soles").value) 
                         + " SOLES</b> (S/. "
                         + " <u>" 
-                        + parseFloat(document.getElementById('monto_soles').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_soles').value)).toFixed(2) 
                         + "</u>). Este pago le confiere el derecho al uso de las instalaciones de Ribera del Río Club Resort bajo los términos y condiciones establecidas en el presente documento.</p>" 
                         + "<h4><u>CUARTO: Financiamiento.</u></h4>"
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
@@ -3703,13 +3707,13 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + " <b>" 
                         + NumerosaLetras(document.getElementById("monto_dolares").value)
                         + " &nbsp;DOLARES</b> ($<u>" 
-                        + parseFloat(document.getElementById('monto_dolares').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_dolares').value)).toFixed(2) 
                         + "</u>) los cuales al tipo de cambio del día <u>" 
                         + document.getElementById('tipo_cambio').value + "</u>, serian <b>" 
                         + NumerosaLetras(document.getElementById("monto_soles").value) 
                         + " SOLES</b> (S/. "
                         + " <u>" 
-                        + parseFloat(document.getElementById('monto_soles').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_soles').value)).toFixed(2) 
                         + "</u>). Este pago le confiere el derecho al uso de las instalaciones de Ribera del Río Club Resort bajo los términos y condiciones establecidas en el presente documento.</p>" 
                         + "<h4><u>CUARTO: Financiamiento.</u></h4>"
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
@@ -4371,13 +4375,13 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + " <b>" 
                         + NumerosaLetras(document.getElementById("monto_dolares").value)
                         + " &nbsp;DOLARES</b> ($<u>" 
-                        + parseFloat(document.getElementById('monto_dolares').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_dolares').value)).toFixed(2) 
                         + "</u>) los cuales al tipo de cambio del día <u>" 
                         + document.getElementById('tipo_cambio').value + "</u>, serian <b>" 
                         + NumerosaLetras(document.getElementById("monto_soles").value) 
                         + " SOLES</b> (S/. "
                         + " <u>" 
-                        + parseFloat(document.getElementById('monto_soles').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_soles').value)).toFixed(2) 
                         + "</u>). Este pago le confiere el derecho al uso de las instalaciones de Ribera del Río Club Resort bajo los términos y condiciones establecidas en el presente documento.</p>" 
                         + "<h4><u>CUARTO: Financiamiento.</u></h4>"
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
@@ -5042,13 +5046,13 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + " <b>" 
                         + NumerosaLetras(document.getElementById("monto_dolares").value)
                         + " &nbsp;DOLARES</b> ($<u>" 
-                        + parseFloat(document.getElementById('monto_dolares').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_dolares').value)).toFixed(2) 
                         + "</u>) los cuales al tipo de cambio del día <u>" 
                         + document.getElementById('tipo_cambio').value + "</u>, serian <b>" 
                         + NumerosaLetras(document.getElementById("monto_soles").value) 
                         + " SOLES</b> (S/. "
                         + " <u>" 
-                        + parseFloat(document.getElementById('monto_soles').value).toFixed(2) 
+                        + BorrarDecimal(parseFloat(document.getElementById('monto_soles').value)).toFixed(2) 
                         + "</u>). Este pago le confiere el derecho al uso de las instalaciones de Ribera del Río Club Resort bajo los términos y condiciones establecidas en el presente documento.</p>" 
                         + "<h4><u>CUARTO: Financiamiento.</u></h4>"
                         + "<p style='text-align:justify;'>El AFILIADO podrá realizar el financiamiento por un máximo del <u>&nbsp;" 
@@ -5789,7 +5793,7 @@ word = "<html "
              + " SOLES</u>)</b></center></br></div>";
 
     word += "<div style='font-size: 10pt;font-family:Calibri'><center>(S/.&nbsp;<u>" 
-         + parseFloat(array_pagares[i]* parseFloat(document.getElementById('tipo_cambio').value)).toFixed(2)
+         + BorrarDecimal(parseFloat(array_pagares[i]* parseFloat(document.getElementById('tipo_cambio').value))).toFixed(2)
          + "&nbsp;</u>) ESTE VALOR ES EL SALDO A FINANCIAR</center></br></div>";
 
     word += "<div style='font-size: 10pt;margin: 0;padding:0;font-family:Calibri;text-align: justify;'><span> Yo <b>" 
@@ -5803,13 +5807,13 @@ word = "<html "
         + "Me comprometo a pagar incondicionalmente a VALLE ENCANTADO S.A.C la suma de <b>" 
         + NumerosaLetras((array_pagares[i] * parseFloat(document.getElementById('tipo_cambio').value)))
         + " SOLES </b> (S/ <b><u>&nbsp;" 
-        + parseFloat(array_pagares[i] * parseFloat(document.getElementById('tipo_cambio').value)).toFixed(2)
+        + BorrarDecimal(parseFloat(array_pagares[i] * parseFloat(document.getElementById('tipo_cambio').value))).toFixed(2)
         + "&nbsp;</u></b>) pagadero en <b>"
         + array_pagares_cuotas[i].toString()
         + "</b> cuotas mensuales y consecutivas con vencimiento la primera de ella el día <b>"
         + dateLarge(array_pagares_fechas[i])
         + "</b> , por valor de (S/. <b><u>&nbsp;"
-   /**/ + (calcularCuotaMensual((array_pagares[i]  * parseFloat(document.getElementById('tipo_cambio').value)),array_tasa_anual[i],array_pagares_cuotas[i]).toFixed(2))
+   /**/ + (BorrarDecimal(calcularCuotaMensual((array_pagares[i]  * parseFloat(document.getElementById('tipo_cambio').value)),array_tasa_anual[i],array_pagares_cuotas[i])).toFixed(2))
         + "&nbsp;</u></b> ). El pago de dichas cuotas se realizará en Soles a razón del cambio oficial vigente a la fecha en que se efectúe éste. En caso de mora y mientras ella subsista pagaré intereses moratorios a la tasa máxima establecida para el periodo correspondiente. De igual manera me obligo a pagar todos los gastos y costos de la cobranza judicial.  </span></div>";
     word += "<div style='font-family: Calibri ; margin: 3px;padding:3px;font-size: 10pt;text-align: justify;'> <span>En el evento en que el deudor no pague en el plazo estipulado una o más cuotas, el tenedor de este título podrá declarar vencidos todos los plazos de esta obligación y pedir su inmediato pago total o el pago del saldo.</span></b></div>";
     word += "<div style='font-family: Calibri ; margin: 3px;padding:3px;font-size: 10pt;text-align: justify;'> <span>También acepto que <b>VALLE ENCANTADO S.A.C</b>, declare de plazo vencido la obligación a la que se refiere este pagaré y exigir su pago total en el evento en que sea perseguido judicialmente. El recibo de abono de parciales no implica novación y cualquier pago que se efectúe se imputará primero a gastos, penalidades, y por último a capital. El suscriptor de este pagaré hace constatar que la obligación de pagarla indivisiblemente y solidariamente subsiste en caso de prórroga o prórrogas o de cualquier modificación a lo estipulado. El deudor declara que la suma que debe conforme a este pagaré, no estará sujeta ni a deducción ni a descuentos de cualquier naturaleza, incluyendo sin limitación cualquier impuesto que pueda gravar su pago, por lo tanto, en caso de existir alguna de estas deducciones o descuentos, el deudor deberá aumentar la suma a pagar de tal manera que el tenedor reciba siempre el valor estipulado del pagaré. El deudor acepta desde ahora el endoso, cesión o transferencia que de este pagaré a VALLE ENCANTADO S.A.C. todos los gastos e impuestos relacionados con la suscripción de este pagaré serán por cuenta del deudor. </span></div>";
