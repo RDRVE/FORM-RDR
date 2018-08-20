@@ -961,7 +961,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
             saveAs(blob, 'PRESTACION_DE_SERVICIOS' + ".doc");
 
         
-       console.log("radio 1");
+       
     }
 
 
@@ -1645,6 +1645,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
     }
     else if(document.getElementById("radio3").checked == true){
         
+        /*mensual del 20 %*/
          var static = {
                 mhtml: {
                     top: "Mime-Version: 1.0\nContent-Base: " + location.href + "\nContent-Type: Multipart/related; boundary=\"NEXT.ITEM-BOUNDARY\";type=\"text/html\"\n\n--NEXT.ITEM-BOUNDARY\nContent-Type: text/html; charset=\"utf-8\"\nContent-Location: "
@@ -1718,7 +1719,9 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p>En el caso de incumplimiento del cronograma de pagos, EL AFILIADO, tendrá las siguientes alternativas:</p>"
                         + "<p>1.- Solicitar periodo de gracias por 3 meses.</p>"
                         + "<p>2.- Realizar un traspaso de la membresía a un Tercero.</p>"
-                        + "<p style='text-align:justify;'>3.- Aplicar a liquidación, en el cual se descontará a lo pagado a la fecha, los gastos de ventas y administrativos (equivalentes a 29% del valor total de la membresía). Esta Liquidación se ejecutará, después de la fecha de entrega del proyecto. (indicada en la Clausula Segunda) EL AFILIADO, autoriza al PRESTADOR el endoso de la gestión de cobranza a alguna institución bancaria y/o financiera en caso exista algún saldo de financiamiento directo en Ribera del Rio Club Resort por la adquisición de la membresía.</p>"
+
+                        + "<p style='text-align:justify;'>3.- Aplicar a liquidación, en el cual se descontará a lo pagado a la fecha, los gastos de ventas y administrativos (equivalentes a 22% del valor total de la membresía). Esta Liquidación se ejecutará, después de la fecha de entrega del proyecto. (indicada en la Clausula Segunda) EL AFILIADO, autoriza al PRESTADOR el endoso de la gestión de cobranza a alguna institución bancaria y/o financiera en caso exista algún saldo de financiamiento directo en Ribera del Rio Club Resort por la adquisición de la membresía.</p>"
+                        
                         + "<p>Otro si:</p>"
                         + "<p style='text-align:justify;'>En caso de incumplimiento de pago de las cuotas del financiamiento, según fechas estipuladas en el cronograma se procederá a la suspensión de los beneficios (según Plan de Beneficios – ANEXO 1) como sigue:</p>"
                         + "<div class='dat'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a) Atraso de UNA (1) CUOTA MENSUAL, se procederá a la suspensión de los beneficios de descuentos.</div>"
@@ -1736,12 +1739,12 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<center>Clásica " + "&nbsp;&nbsp;<u>" + mantenimiento_clasica + "</u>&#09;Dorada &nbsp;&nbsp;<u>" + mantenimiento_dorada +"</u>&#09; Premiun &nbsp;&nbsp;<u>" + mantenimiento_premium + "</u></center>"
                         
                         + "<p style='text-align:justify;'>En caso de incumplimiento de pago de las cuotas del mantenimiento, se procederá a la suspensión de los beneficios (según Plan de Beneficios – ANEXO 1) como sigue:</p>"
-                        + "<div class='dat'> a)  Atraso de UNA (1) CUOTA MENSUAL, se procederá a la suspensión de los beneficios de descuentos.</div>"
+                        + "<br><div class='dat'> a)  Atraso de UNA (1) CUOTA MENSUAL, se procederá a la suspensión de los beneficios de descuentos.</div>"
                         + "<div class='datos'>b)  Atraso de DOS (2) CUOTAS MENSUALES, se procederá a la suspensión de los beneficios de Club y Alojamiento.</div>"
                         + "<div class='datos'>c)  No se habilitará el USO, hasta la subsanación del pago de todas las mensualidades pendientes.</div>"
 
 
-                        + "<br /><h4><u>SEXTO: Renovación.</u></h4>"
+                        + "<h4><u>SEXTO: Renovación.</u></h4>"
                         + "<p style='text-align:justify;'>EL PRESTADOR asegura disponibilidad de membresía para renovaciones. Teniendo en consideración las siguientes condiciones:</p>"
                         + "<p style='text-align:justify;'>6.1. El Precio de la renovación será equivalente al <u>&nbsp;" 
                         + document.getElementById('renovacion_procentaje').value + "&nbsp;</u> % del precio vigente a la fecha de renovación.</p>"
@@ -1758,8 +1761,9 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p  style='text-align:justify;'>7.5.1. Según el tipo de membresía adquirida, cada AFILIADO tiene derecho a un número de invitados mensuales (ver detalle en Plan de Beneficios).</p>"
                         + "<p  style='text-align:justify;'>7.5.2. Los invitados adicionales deberán pagar por su ingreso según tarifario vigente. En el caso de eventos y reservas, la cantidad de invitados puede variar de acuerdo a las condiciones convenidas con EL AFILIADO.</p>"
                         + "<p  style='text-align:justify;'>7.5.3 Se aplicarán restricciones en fines de semana largos y/o feriados.</p>"
-                        + "<p  style='text-align:justify;'>7.6. Beneficiarios. Todos los AFLIADOS tendrán derecho a adicionar hasta 3 personas el núcleo familiar y/o Beneficiarios directos. Realizando el pago correspondiente según lo indique cada tipo de membresía. Este pago está especificado en el anexo: “Plan de Beneficios”.</p>"
-                        + "<br /><br /><br /><br /><small></small><p></p><br /><p  style='text-align:justify;'>7.7. Incumplimiento Pacto Entrega. Todos los AFILIADOS tendrán derecho a una vez cumplido el plazo de entrega del proyecto (02/01/2021), si este no fuese entregado conforme, poder reclamar el 100% de sus aportes, y dejar sin efecto este contrato. Ribera del Río Club Resort, se compromete a poner a su disposición esta cantidad en cheque bancario. Sólo aplica para los AFILIADOS, que hayan cancelado el 100% del monto de su membresía. Los Afiliados que no hayan cancelado la totalidad se aplicara según Clausula CUARTA.</p>"
+                        + "<br><br><br><small>&nbsp;</small><p  style='text-align:justify;'>7.6. Beneficiarios. Todos los AFLIADOS tendrán derecho a adicionar hasta 3 personas el núcleo familiar y/o Beneficiarios directos. Realizando el pago correspondiente según lo indique cada tipo de membresía. Este pago está especificado en el anexo: “Plan de Beneficios”.</p>"
+                        
+                        + "<p  style='text-align:justify;'>7.7. Incumplimiento Pacto Entrega. Todos los AFILIADOS tendrán derecho a una vez cumplido el plazo de entrega del proyecto (02/01/2021), si este no fuese entregado conforme, poder reclamar el 100% de sus aportes, y dejar sin efecto este contrato. Ribera del Río Club Resort, se compromete a poner a su disposición esta cantidad en cheque bancario. Sólo aplica para los AFILIADOS, que hayan cancelado el 100% del monto de su membresía. Los Afiliados que no hayan cancelado la totalidad se aplicara según Clausula CUARTA.</p>"
                         + "<h4><u>OCTAVO: Obligaciones del Usuario.</u></h4>"
                         + "<p style='text-align:justify;'>8.1. EL AFILIADO declara responsabilizarse por los daños que éste, su cónyuge, hijos, hijas e invitados pudieran causar a las instalaciones de Ribera del Río Club Resort ya sea por dolo, culpa leve o culpa inexcusable.</p>"
                         + "<p style='text-align:justify;'>8.2. EL AFILIADO reconoce que Ribera del Río Club Resort a través de su administración podrá imponer a los afiliados las sanciones que constan en el Reglamento de Ribera del Río Club Resort.</p>"
@@ -1770,10 +1774,14 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p style='text-align:justify;'>Este contrato queda resuelto de manera automática una vez finalizado el periodo de la membresía contratado. En caso de incumplimiento de cualquier obligación del presente contrato y del Reglamento por parte de EL AFILIADO, Ribera del Río Club Resort podrá resolverlo de manera automática y sin lugar a devolución de dinero.</p>"
                         + "<h4><u>DECIMO: Cesión.</u></h4>"
                         + "<p style='text-align:justify;'>EL AFILIADO puede ceder, transferir o donar, parcial o totalmente cualquier servicio y/u obligaciones bajo este contrato, con el solo llenado de los formatos correspondientes.</p>"
+                        
                         + "<h4><u>DECIMO PRIMERO: Resolución Unilateral.</u></h4>"
-                        + "<p style='text-align:justify;'>Podrán resolver unilateralmente el contrato, mediante una comunicación por escrito y bajo cargo de entrega, dentro de los cinco (5) días calendarios siguiente suscrito el contrato; para lo cual no es necesaria una expresión de causa, con lo cual acepta pagar el 29 % del valor total de la membresía adquirida (correspondiente a los gastos de ventas y administrativos al igual como se indica en la clausula cuarta en caso de financiamiento), por concepto de penalidad, devolviéndose el saldo en el caso que lo hubiera, en un plazo no menor de 45 días ni mayor de 60 días, sin que se genere ningún tipo de interés compensatorio o moratorio ni de cualquier tipo. La devolución total procederá en el caso que la autoridad competente disponga en los plazos indicados previa demostración objetiva y fehaciente por parte de EL AFILIADO según lo previsto en el articulo N° 59 de la ley N°29571.</p>"
-                        + "<h4><u>DECIMO SEGUNDO: Normas Adicionales.</u></h4>"
-                        + "<p style='text-align:justify;'>Ribera del Río Club Resort, se reserva el derecho a modificar, adicionar y/o complementar normas. Todas estas modificaciones adicionales y demás estarán en vigor al día siguiente de su publicación. El incumplimiento de las </p><br /><p> mismas dará lugar a la cancelación de los derechos de EL AFILIADO, como también en los casos en que comportamiento sea considerado molesto, perturbador, inmoral o fraudulento, sin derecho a devolución del monto pagado.</p>"
+                        
+                        + "<p style='text-align:justify;'>Podrán resolver unilateralmente el contrato, mediante una comunicación por escrito y bajo cargo de entrega, dentro de los cinco (5) días calendarios siguiente suscrito el contrato; para lo cual no es necesaria una expresión de causa, con lo cual acepta pagar el 22 % del valor total de la membresía adquirida (correspondiente a los gastos de ventas y administrativos al igual como se indica en la clausula cuarta en caso de financiamiento), por concepto de penalidad, devolviéndose el saldo en el caso que lo hubiera, en un plazo no menor de 45 días ni mayor de 60 días, sin que se genere ningún tipo de interés compensatorio o moratorio ni de cualquier tipo. La devolución total procederá en el caso que la autoridad competente disponga en los plazos indicados previa demostración objetiva y fehaciente por parte de EL AFILIADO según lo previsto en el articulo N° 59 de la ley N°29571.</p>"
+                        + "<br><small>&nbsp;</small><h4><u>DECIMO SEGUNDO: Normas Adicionales.</u></h4>"
+
+                        + "<p style='text-align:justify;'>Ribera del Río Club Resort, se reserva el derecho a modificar, adicionar y/o complementar normas. Todas estas modificaciones adicionales y demás estarán en vigor al día siguiente de su publicación. El incumplimiento de las mismas dará lugar a la cancelación de los derechos de EL AFILIADO, como también en los casos en que comportamiento sea considerado molesto, perturbador, inmoral o fraudulento, sin derecho a devolución del monto pagado.</p>"
+                        
                         + "<h4><u>DECIMO TERCERO: Beneficiarios.</u></h4>"
                         + "<p style='text-align:justify;'>EL AFILIADO, tiene la posibilidad de cambiar a sus beneficiarios de manera anual, con el solo llenado de los formatos correspondientes.</p>"
                         + "<h4>Directos </h4>"
@@ -1790,13 +1798,14 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<div class='datos' style='text-align:justify;'>Nombre <b>: " + ben_nombre10 + "</b>Fecha de Nacimiento: <b>" + ben_fecha10 + "</b> Grado de Parentesco:<b>" + ben_parentesco10 + "</b></div>"
                         + "<h4><u>DECIMO CUARTO: Manejo de datos Personales.</u></h4>"
                         + "<p style='text-align:justify;'>EL AFILIADO, autoriza a Ribera del Río Club Resort, el uso de los datos consignados en el presente contrato para fines de comunicación y promoción de los productos y servicios que éste ofrece.</p>"
-                        + "<h4><u>DECIMO QUINTO: Estipulaciones Anteriores.</u></h4>"
-                        + "<p style='text-align:justify;'>Las partes contratantes manifiestan que el presente contrato constituye un acuerdo completo y total acerca de su objeto y reemplaza cualquier otro acuerdo verbal o escrito celebrado con anterioridad.</p>"
+                       
+                       + "<b><u>DECIMO QUINTO: Estipulaciones Anteriores.</u></b>"
+                        + "<p ><font style='text-align:justify;'>Las partes contratantes manifiestan que el presente contrato constituye un acuerdo completo y total acerca de su objeto y reemplaza cualquier otro acuerdo verbal o escrito celebrado con anterioridad.</p>"
                         + "<p style='text-align:justify;'>Para constancia se firma en dos (2) ejemplares del mismo tenor, el día <b>"
-                        + dateLarge(document.getElementById('fecha_actual').value) + ".<b></p>"
-                        + "<br/><br/><br/>"
-                        + "<p>______________________________________&#09;  &#09;_____________________________</p>"
-                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: ____________________<br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
+                        + dateLarge(document.getElementById('fecha_actual').value) + ".<b></font></p>"
+                        + "<br/><br/>"
+                        + "<p>______________________________________&#09;  &#09;&#09;  &#09;_____________________________</p>"
+                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;&#09;  &#09;  DIRECTOR <br />Nombres y Apellidos:<br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
                         + ""
 
 
@@ -2312,7 +2321,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
         }
 
         else if(document.getElementById("radio4").checked == true){
-        /*con el 50 %*/
+        /* ANUAL con el 50 %*/
          var static = {
                 mhtml: {
                     top: "Mime-Version: 1.0\nContent-Base: " + location.href + "\nContent-Type: Multipart/related; boundary=\"NEXT.ITEM-BOUNDARY\";type=\"text/html\"\n\n--NEXT.ITEM-BOUNDARY\nContent-Type: text/html; charset=\"utf-8\"\nContent-Location: "
@@ -2409,7 +2418,9 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         
 
                         + "<p style='text-align:justify;'>En caso de incumplimiento de pago de las cuotas del mantenimiento, se procederá a la suspensión de los beneficios (según Plan de Beneficios – ANEXO 1), no se habilitará el USO, hasta la subsanación del pago ó pagos pendientes.</p>"
-                        + "<br /><h4><u>SEXTO: Renovación.</u></h4>"
+                        
+                        + "<br><h4><u>SEXTO: Renovación.</u></h4>"
+                        
                         + "<p style='text-align:justify;'>EL PRESTADOR asegura disponibilidad de membresía para renovaciones. Teniendo en consideración las siguientes condiciones:</p>"
                         + "<p style='text-align:justify;'>6.1. El Precio de la renovación será equivalente al <u>&nbsp;" 
                         + document.getElementById('renovacion_procentaje').value + "&nbsp;</u> % del precio vigente a la fecha de renovación.</p>"
@@ -3710,7 +3721,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09; <u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_3_Cuotas + "</u> 3 Cuotas - Cada cuota de    (S/.<u>" + opcion_3_Cuotas_soles + "</u>)  &#09;<u>" + opcion_18_Cuotas +"</u> 18 Cuotas - Cada cuota de  (S/.<u>" + opcion_18_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09; <u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
-                        + "<br/><br/><br/><br/><br /><br />"
+                        + "<br/><br/><br/><br/><br />"
                         + "<small>&nbsp;</small>"
                         + "<div style='font-size:14pt;text-align:justify;'><b>&#09;-  Cuenta Corriente Soles BCP - Cuota Inicial      &#09; &#09;192-2459697-0-22"
                         + "<br/>&#09;-  Cuenta Recaudadora Soles BCP             &#09; &#09;&#09;&#09;193-2361209-0-94  "
@@ -3736,12 +3747,12 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<center>Clásica " + "&nbsp;&nbsp;<u>" + mantenimiento_clasica + "</u>&#09;Dorada &nbsp;&nbsp;<u>" + mantenimiento_dorada +"</u>&#09; Premiun &nbsp;&nbsp;<u>" + mantenimiento_premium + "</u></center>"
                         
                         + "<p style='text-align:justify;'>En caso de incumplimiento de pago de las cuotas del mantenimiento, se procederá a la suspensión de los beneficios (según Plan de Beneficios – ANEXO 1) como sigue:</p>"
-                        + "<div class='dat'> a)  Atraso de UNA (1) CUOTA MENSUAL, se procederá a la suspensión de los beneficios de descuentos.</div>"
+                        + "<br><div class='dat'> a)  Atraso de UNA (1) CUOTA MENSUAL, se procederá a la suspensión de los beneficios de descuentos.</div>"
                         + "<div class='datos'>b)  Atraso de DOS (2) CUOTAS MENSUALES, se procederá a la suspensión de los beneficios de Club y Alojamiento.</div>"
                         + "<div class='datos'>c)  No se habilitará el USO, hasta la subsanación del pago de todas las mensualidades pendientes.</div>"
 
 
-                        + "<br /><h4><u>SEXTO: Renovación.</u></h4>"
+                        + "<h4><u>SEXTO: Renovación.</u></h4>"
                         + "<p style='text-align:justify;'>EL PRESTADOR asegura disponibilidad de membresía para renovaciones. Teniendo en consideración las siguientes condiciones:</p>"
                         + "<p style='text-align:justify;'>6.1. El Precio de la renovación será equivalente al <u>&nbsp;" 
                         + document.getElementById('renovacion_procentaje').value + "&nbsp;</u> % del precio vigente a la fecha de renovación.</p>"
@@ -3759,7 +3770,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p  style='text-align:justify;'>7.5.2. Los invitados adicionales deberán pagar por su ingreso según tarifario vigente. En el caso de eventos y reservas, la cantidad de invitados puede variar de acuerdo a las condiciones convenidas con EL AFILIADO.</p>"
                         + "<p  style='text-align:justify;'>7.5.3 Se aplicarán restricciones en fines de semana largos y/o feriados.</p>"
                         + "<p  style='text-align:justify;'>7.6. Beneficiarios. Todos los AFLIADOS tendrán derecho a adicionar hasta 3 personas el núcleo familiar y/o Beneficiarios directos. Realizando el pago correspondiente según lo indique cada tipo de membresía. Este pago está especificado en el anexo: “Plan de Beneficios”.</p>"
-                        + "<br /><br /><br /><br /><small></small><p></p><br /><p  style='text-align:justify;'>7.7. Incumplimiento Pacto Entrega. Todos los AFILIADOS tendrán derecho a una vez cumplido el plazo de entrega del proyecto (02/01/2021), si este no fuese entregado conforme, poder reclamar el 100% de sus aportes, y dejar sin efecto este contrato. Ribera del Río Club Resort, se compromete a poner a su disposición esta cantidad en cheque bancario. Sólo aplica para los AFILIADOS, que hayan cancelado el 100% del monto de su membresía. Los Afiliados que no hayan cancelado la totalidad se aplicara según Clausula CUARTA.</p>"
+                        + "<br><small></small><p  style='text-align:justify;'>7.7. Incumplimiento Pacto Entrega. Todos los AFILIADOS tendrán derecho a una vez cumplido el plazo de entrega del proyecto (02/01/2021), si este no fuese entregado conforme, poder reclamar el 100% de sus aportes, y dejar sin efecto este contrato. Ribera del Río Club Resort, se compromete a poner a su disposición esta cantidad en cheque bancario. Sólo aplica para los AFILIADOS, que hayan cancelado el 100% del monto de su membresía. Los Afiliados que no hayan cancelado la totalidad se aplicara según Clausula CUARTA.</p>"
                         + "<h4><u>OCTAVO: Obligaciones del Usuario.</u></h4>"
                         + "<p style='text-align:justify;'>8.1. EL AFILIADO declara responsabilizarse por los daños que éste, su cónyuge, hijos, hijas e invitados pudieran causar a las instalaciones de Ribera del Río Club Resort ya sea por dolo, culpa leve o culpa inexcusable.</p>"
                         + "<p style='text-align:justify;'>8.2. EL AFILIADO reconoce que Ribera del Río Club Resort a través de su administración podrá imponer a los afiliados las sanciones que constan en el Reglamento de Ribera del Río Club Resort.</p>"
@@ -4300,7 +4311,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                + "   {margin-bottom:0cm;}"
                + " p{text-align: justify;font-size: 11pt;}"
                + " body{font-family: 'Calibri';} "
-               + " .dat{margin-top:7px;margin-bottom:7px;font-size: 11pt;} .datos{margin-bottom:7px;font-size: 11pt;}";
+               + " .dat{margin-top:7px;margin-bottom:5px;font-size: 11pt;} .datos{margin-bottom:5px;font-size: 11pt;}";
 
             // Aggregate parts of the file together
             var fileContent = static.mhtml.top.replace("_html_", static.mhtml.head.replace("_styles_", styles) + static.mhtml.body.replace("_body_", '')) + mhtmlBottom;
@@ -4406,12 +4417,12 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<center>Clásica " + "&nbsp;&nbsp;<u>" + mantenimiento_clasica + "</u>&#09;Dorada &nbsp;&nbsp;<u>" + mantenimiento_dorada +"</u>&#09; Premiun &nbsp;&nbsp;<u>" + mantenimiento_premium + "</u></center>"
                         
                         + "<p style='text-align:justify;'>En caso de incumplimiento de pago de las cuotas del mantenimiento, se procederá a la suspensión de los beneficios (según Plan de Beneficios – ANEXO 1) como sigue:</p>"
-                        + "<div class='dat'> a)  Atraso de UNA (1) CUOTA MENSUAL, se procederá a la suspensión de los beneficios de descuentos.</div>"
+                        + "<br /><div class='dat'> a)  Atraso de UNA (1) CUOTA MENSUAL, se procederá a la suspensión de los beneficios de descuentos.</div>"
                         + "<div class='datos'>b)  Atraso de DOS (2) CUOTAS MENSUALES, se procederá a la suspensión de los beneficios de Club y Alojamiento.</div>"
                         + "<div class='datos'>c)  No se habilitará el USO, hasta la subsanación del pago de todas las mensualidades pendientes.</div>"
 
 
-                        + "<br /><h4><u>SEXTO: Renovación.</u></h4>"
+                        + "<h4><u>SEXTO: Renovación.</u></h4>"
                         + "<p style='text-align:justify;'>EL PRESTADOR asegura disponibilidad de membresía para renovaciones. Teniendo en consideración las siguientes condiciones:</p>"
                         + "<p style='text-align:justify;'>6.1. El Precio de la renovación será equivalente al <u>&nbsp;" 
                         + document.getElementById('renovacion_procentaje').value + "&nbsp;</u> % del precio vigente a la fecha de renovación.</p>"
@@ -4429,7 +4440,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p  style='text-align:justify;'>7.5.2. Los invitados adicionales deberán pagar por su ingreso según tarifario vigente. En el caso de eventos y reservas, la cantidad de invitados puede variar de acuerdo a las condiciones convenidas con EL AFILIADO.</p>"
                         + "<p  style='text-align:justify;'>7.5.3 Se aplicarán restricciones en fines de semana largos y/o feriados.</p>"
                         + "<p  style='text-align:justify;'>7.6. Beneficiarios. Todos los AFLIADOS tendrán derecho a adicionar hasta 3 personas el núcleo familiar y/o Beneficiarios directos. Realizando el pago correspondiente según lo indique cada tipo de membresía. Este pago está especificado en el anexo: “Plan de Beneficios”.</p>"
-                        + "<br /><br /><br /><br /><small></small><p></p><br /><p  style='text-align:justify;'>7.7. Incumplimiento Pacto Entrega. Todos los AFILIADOS tendrán derecho a una vez cumplido el plazo de entrega del proyecto (02/01/2021), si este no fuese entregado conforme, poder reclamar el 100% de sus aportes, y dejar sin efecto este contrato. Ribera del Río Club Resort, se compromete a poner a su disposición esta cantidad en cheque bancario. Sólo aplica para los AFILIADOS, que hayan cancelado el 100% del monto de su membresía. Los Afiliados que no hayan cancelado la totalidad se aplicara según Clausula CUARTA.</p>"
+                        + "<p>&nbsp;</p><p  style='text-align:justify;'>7.7. Incumplimiento Pacto Entrega. Todos los AFILIADOS tendrán derecho a una vez cumplido el plazo de entrega del proyecto (02/01/2021), si este no fuese entregado conforme, poder reclamar el 100% de sus aportes, y dejar sin efecto este contrato. Ribera del Río Club Resort, se compromete a poner a su disposición esta cantidad en cheque bancario. Sólo aplica para los AFILIADOS, que hayan cancelado el 100% del monto de su membresía. Los Afiliados que no hayan cancelado la totalidad se aplicara según Clausula CUARTA.</p>"
                         + "<h4><u>OCTAVO: Obligaciones del Usuario.</u></h4>"
                         + "<p style='text-align:justify;'>8.1. EL AFILIADO declara responsabilizarse por los daños que éste, su cónyuge, hijos, hijas e invitados pudieran causar a las instalaciones de Ribera del Río Club Resort ya sea por dolo, culpa leve o culpa inexcusable.</p>"
                         + "<p style='text-align:justify;'>8.2. EL AFILIADO reconoce que Ribera del Río Club Resort a través de su administración podrá imponer a los afiliados las sanciones que constan en el Reglamento de Ribera del Río Club Resort.</p>"
@@ -4446,8 +4457,8 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p style='text-align:justify;'>Podrán resolver unilateralmente el contrato, mediante una comunicación por escrito y bajo cargo de entrega, dentro de los cinco (5) días calendarios siguiente suscrito el contrato; para lo cual no es necesaria una expresión de causa, con lo cual acepta pagar el 38 % del valor total de la membresía adquirida (correspondiente a los gastos de ventas y administrativos al igual como se indica en la clausula cuarta en caso de financiamiento), por concepto de penalidad, devolviéndose el saldo en el caso que lo hubiera, en un plazo no menor de 45 días ni mayor de 60 días, sin que se genere ningún tipo de interés compensatorio o moratorio ni de cualquier tipo. La devolución total procederá en el caso que la autoridad competente disponga en los plazos indicados previa demostración objetiva y fehaciente por parte de EL AFILIADO según lo previsto en el articulo N° 59 de la ley N°29571.</p>"
                         
                         + "<h4><u>DECIMO SEGUNDO: Normas Adicionales.</u></h4>"
-                        + "<p style='text-align:justify;'>Ribera del Río Club Resort, se reserva el derecho a modificar, adicionar y/o complementar normas. Todas estas modificaciones adicionales y demás estarán en vigor al día siguiente de su publicación. El incumplimiento de las </p><br /><p> mismas dará lugar a la cancelación de los derechos de EL AFILIADO, como también en los casos en que comportamiento sea considerado molesto, perturbador, inmoral o fraudulento, sin derecho a devolución del monto pagado.</p>"
-                        + "<h4><u>DECIMO TERCERO: Beneficiarios.</u></h4>"
+                        + "<p style='text-align:justify;'>Ribera del Río Club Resort, se reserva el derecho a modificar, adicionar y/o complementar normas. Todas estas modificaciones adicionales y demás estarán en vigor al día siguiente de su publicación. El incumplimiento de las mismas dará lugar a la cancelación de los derechos de EL AFILIADO, como también en los casos en que comportamiento sea considerado molesto, perturbador, inmoral o fraudulento, sin derecho a devolución del monto pagado.</p>"
+                        + "<br><h4><u>DECIMO TERCERO: Beneficiarios.</u></h4>"
                         + "<p style='text-align:justify;'>EL AFILIADO, tiene la posibilidad de cambiar a sus beneficiarios de manera anual, con el solo llenado de los formatos correspondientes.</p>"
                         + "<h4>Directos </h4>"
                         + "<div class='dat' style='text-align:justify;'>Nombre:  <b>" + ben_nombre1 + "</b> Fecha de Nacimiento: &nbsp;<b> " + ben_fecha1 + " </b>&nbsp; Grado de Parentesco: " + ben_parentesco1 + "</div>"
@@ -5049,8 +5060,8 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<div class='dat'><u>" + opcion_contado + "</u> Al Contado &#09;&#09;&#09;&#09; <u>" + opcion_12_Cuotas + "</u> 12 Cuotas - Cada cuota de  (S/.<u>" + opcion_12_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_3_Cuotas + "</u> 3 Cuotas - Cada cuota de    (S/.<u>" + opcion_3_Cuotas_soles + "</u>)  &#09;<u>" + opcion_18_Cuotas +"</u> 18 Cuotas - Cada cuota de  (S/.<u>" + opcion_18_Cuotas_soles + "</u>)</div>"
                         + "<div class='datos'><u>" + opcion_6_Cuotas +"</u> 6 Cuotas - Cada cuota de    (S/.<u>" + opcion_6_Cuotas_soles +"</u>) &#09; <u>" + opcion_24_Cuotas +"</u> 24 Cuotas - Cada cuota de  (S/.<u>" + opcion_24_Cuotas_soles +"</u>)</div>"
-                        + "<br/><br/><br/><br/><br /><br />"
-                        + "<small>&nbsp;</small>"
+                        + "<br/><br/><br/><br/><br /><br>"
+                        + "<br><br>"
                         + "<div style='font-size:14pt;text-align:justify;'><b>&#09;-  Cuenta Corriente Soles BCP - Cuota Inicial      &#09; &#09;192-2459697-0-22"
                         + "<br/>&#09;-  Cuenta Recaudadora Soles BCP             &#09; &#09;&#09;&#09;193-2361209-0-94  "
                         + "<br/>&#09;(Financiamiento y Mantenimiento) - Credipago.</b></div>"
@@ -5077,19 +5088,21 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<center>Clásica " + "&nbsp;&nbsp;<u>" + mantenimiento_clasica + "</u>&#09;Dorada &nbsp;&nbsp;<u>" + mantenimiento_dorada +"</u>&#09; Premiun &nbsp;&nbsp;<u>" + mantenimiento_premium + "</u></center>"
                         
                         + "<p style='text-align:justify;'>En caso de incumplimiento de pago de las cuotas del mantenimiento, se procederá a la suspensión de los beneficios (según Plan de Beneficios – ANEXO 1) como sigue:</p>"
-                        + "<div class='dat'> a)  Atraso de UNA (1) CUOTA MENSUAL, se procederá a la suspensión de los beneficios de descuentos.</div>"
+                        + "<br><div class='dat'> a)  Atraso de UNA (1) CUOTA MENSUAL, se procederá a la suspensión de los beneficios de descuentos.</div>"
                         + "<div class='datos'>b)  Atraso de DOS (2) CUOTAS MENSUALES, se procederá a la suspensión de los beneficios de Club y Alojamiento.</div>"
                         + "<div class='datos'>c)  No se habilitará el USO, hasta la subsanación del pago de todas las mensualidades pendientes.</div>"
 
 
-                        + "<br /><h4><u>SEXTO: Renovación.</u></h4>"
+                        + "<h4><u>SEXTO: Renovación.</u></h4>"
                         + "<p style='text-align:justify;'>EL PRESTADOR asegura disponibilidad de membresía para renovaciones. Teniendo en consideración las siguientes condiciones:</p>"
-                        + "<p style='text-align:justify;'>6.1. El Precio de la renovación será equivalente al <u>&nbsp;" 
-                        + document.getElementById('renovacion_procentaje').value + "&nbsp;</u> % del precio vigente a la fecha de renovación.</p>"
-                        + "<p style='text-align:justify;'>6.2. EL AFILIADO al optar por la renovación, acepta las condiciones y normas vigentes a dicha fecha.</p>"
-                        + "<p style='text-align:justify;'>6.3. A los 30 años de AFILIADO, este pasará a la modalidad de Vitalicio. Esta modalidad no genera herencia. </p>"
                         
-                        + "<p style='text-align:justify;'>6.4. El número de membresías será determinado en función a la ocupabilidad, poniendo el Resort a disposición de sus AFILIADOS el 25% de su capacidad instalada anual.</p>"
+                        + "<div class='dato' style='text-align:justify;'>6.1. El Precio de la renovación será equivalente al <u>&nbsp;" 
+                        + document.getElementById('renovacion_procentaje').value + "&nbsp;</u> % del precio vigente a la fecha de renovación.</div>"
+                        + "<div class='datos' style='text-align:justify;'>6.2. EL AFILIADO al optar por la renovación, acepta las condiciones y normas vigentes a dicha fecha.</div>"
+                        + "<div class='datos' style='text-align:justify;'>6.3. A los 30 años de AFILIADO, este pasará a la modalidad de Vitalicio. Esta modalidad no genera herencia. </div>"
+                        
+                        + "<div class='datos' style='text-align:justify;'>6.4. El número de membresías será determinado en función a la ocupabilidad, poniendo el Resort a disposición de sus AFILIADOS el 25% de su capacidad instalada anual.</div>"
+                        
                         + "<h4><u>SETIMO: Derechos del Usuario.</u></h4>"
                         + "<p style='text-align:justify;'>7.1. Identificación. A las 48 horas de realizado el pago de la cuota de ingreso, se actualizará en sistema el núcleo familiar del AFILIADO. Los cuales para poder hacer uso y beneficio de la membresía, sólo deberán mostrar su Documento de Identidad (DNI, Carnet de Extranjería).</p>"
                         + "<p  style='text-align:justify;'>7.2. Kit de Bienvenida. Cada AFILIADO, después de formalizar su sistema de pago, recibe el Kit en un plazo de 15 días útiles. El Kit incluye: Carta de Bienvenida donde se consigna su número de afiliado, Cronograma de Pagos (caso hubiese fraccionamiento), Estatutos y Reglamentos de Ribera del Río Club Resort. Este Kit de Bienvenida únicamente será entregado en alguna de nuestras oficinas previa coordinación con el titular o vía correo electrónico según prefiera EL AFILIADO.</p>"
@@ -5099,8 +5112,8 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<p  style='text-align:justify;'>7.5.1. Según el tipo de membresía adquirida, cada AFILIADO tiene derecho a un número de invitados mensuales (ver detalle en Plan de Beneficios).</p>"
                         + "<p  style='text-align:justify;'>7.5.2. Los invitados adicionales deberán pagar por su ingreso según tarifario vigente. En el caso de eventos y reservas, la cantidad de invitados puede variar de acuerdo a las condiciones convenidas con EL AFILIADO.</p>"
                         + "<p  style='text-align:justify;'>7.5.3 Se aplicarán restricciones en fines de semana largos y/o feriados.</p>"
-                        + "<br /><br /><br /><br /><small></small><p></p><p  style='text-align:justify;'>7.6. Beneficiarios. Todos los AFLIADOS tendrán derecho a adicionar hasta 3 personas el núcleo familiar y/o Beneficiarios directos. Realizando el pago correspondiente según lo indique cada tipo de membresía. Este pago está especificado en el anexo: “Plan de Beneficios”.</p>"
-                        + "<p  style='text-align:justify;'>7.7. Incumplimiento Pacto Entrega. Todos los AFILIADOS tendrán derecho a una vez cumplido el plazo de entrega del proyecto (02/01/2021), si este no fuese entregado conforme, poder reclamar el 100% de sus aportes, y dejar sin efecto este contrato. Ribera del Río Club Resort, se compromete a poner a su disposición esta cantidad en cheque bancario. Sólo aplica para los AFILIADOS, que hayan cancelado el 100% del monto de su membresía. Los Afiliados que no hayan cancelado la totalidad se aplicara según Clausula CUARTA.</p>"
+                        + "<p  style='text-align:justify;'>7.6. Beneficiarios. Todos los AFLIADOS tendrán derecho a adicionar hasta 3 personas el núcleo familiar y/o Beneficiarios directos. Realizando el pago correspondiente según lo indique cada tipo de membresía. Este pago está especificado en el anexo: “Plan de Beneficios”.</p>"
+                        + "<br><p>&nbsp;</p><p  style='text-align:justify;'>7.7. Incumplimiento Pacto Entrega. Todos los AFILIADOS tendrán derecho a una vez cumplido el plazo de entrega del proyecto (02/01/2021), si este no fuese entregado conforme, poder reclamar el 100% de sus aportes, y dejar sin efecto este contrato. Ribera del Río Club Resort, se compromete a poner a su disposición esta cantidad en cheque bancario. Sólo aplica para los AFILIADOS, que hayan cancelado el 100% del monto de su membresía. Los Afiliados que no hayan cancelado la totalidad se aplicara según Clausula CUARTA.</p>"
                         + "<h4><u>OCTAVO: Obligaciones del Usuario.</u></h4>"
                         + "<p style='text-align:justify;'>8.1. EL AFILIADO declara responsabilizarse por los daños que éste, su cónyuge, hijos, hijas e invitados pudieran causar a las instalaciones de Ribera del Río Club Resort ya sea por dolo, culpa leve o culpa inexcusable.</p>"
                         + "<p style='text-align:justify;'>8.2. EL AFILIADO reconoce que Ribera del Río Club Resort a través de su administración podrá imponer a los afiliados las sanciones que constan en el Reglamento de Ribera del Río Club Resort.</p>"
@@ -5115,10 +5128,10 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + "<h4><u>DECIMO PRIMERO: Resolución Unilateral.</u></h4>"
                         
                         + "<p style='text-align:justify;'>Podrán resolver unilateralmente el contrato, mediante una comunicación por escrito y bajo cargo de entrega, dentro de los cinco (5) días calendarios siguiente suscrito el contrato; para lo cual no es necesaria una expresión de causa, con lo cual acepta pagar el 51 % del valor total de la membresía adquirida (correspondiente a los gastos de ventas y administrativos al igual como se indica en la clausula cuarta en caso de financiamiento), por concepto de penalidad, devolviéndose el saldo en el caso que lo hubiera, en un plazo no menor de 45 días ni mayor de 60 días, sin que se genere ningún tipo de interés compensatorio o moratorio ni de cualquier tipo. La devolución total procederá en el caso que la autoridad competente disponga en los plazos indicados previa demostración objetiva y fehaciente por parte de EL AFILIADO según lo previsto en el articulo N° 59 de la ley N°29571.</p>"
-                        + "<br /><br />"
+                        + ""
                         + "<h4><u>DECIMO SEGUNDO: Normas Adicionales.</u></h4>"
                         + "<p style='text-align:justify;'>Ribera del Río Club Resort, se reserva el derecho a modificar, adicionar y/o complementar normas. Todas estas modificaciones adicionales y demás estarán en vigor al día siguiente de su publicación. El incumplimiento de las  mismas dará lugar a la cancelación de los derechos de EL AFILIADO, como también en los casos en que comportamiento sea considerado molesto, perturbador, inmoral o fraudulento, sin derecho a devolución del monto pagado.</p>"
-                        + "<h4><u>DECIMO TERCERO: Beneficiarios.</u></h4>"
+                        + "<br /><br /><h4><u>DECIMO TERCERO: Beneficiarios.</u></h4>"
                         + "<p style='text-align:justify;'>EL AFILIADO, tiene la posibilidad de cambiar a sus beneficiarios de manera anual, con el solo llenado de los formatos correspondientes.</p>"
                         + "<h4>Directos </h4>"
                         + "<div class='dat' style='text-align:justify;'>Nombre:  <b>" + ben_nombre1 + "</b> Fecha de Nacimiento: &nbsp;<b> " + ben_fecha1 + " </b>&nbsp; Grado de Parentesco: " + ben_parentesco1 + "</div>"
@@ -5140,7 +5153,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + dateLarge(document.getElementById('fecha_actual').value) + ".</p>"
                         + "<br/><br/><br/>"
                         + "<p>______________________________________&#09;  &#09;_____________________________</p>"
-                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: ____________________<br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
+                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: <br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
                         + ""
 
 
