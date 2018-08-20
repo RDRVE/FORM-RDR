@@ -1,0 +1,199 @@
+body{
+	margin: 0 ;
+	padding: 0;
+
+}
+label{
+	margin: 10px;
+	padding: 10px;
+
+}
+select{
+	width: 155px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: 10px;
+}
+h2{
+	align-items: center;
+	text-align: center;
+}
+input{
+	  border-bottom: 0px solid #666666;
+}
+fieldset{
+  margin: 25px;
+}
+.linea{
+	margin: 10px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background: rgb(59,103,158);
+  background: -moz-linear-gradient(45deg, rgba(59,103,158,1) 0%, rgba(43,136,217,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  color: #fff;
+  
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+.formulario{
+	background: #100e0e4d;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #666666;
+    width: 650px;
+    box-shadow: 2px 5px 2px grey, 2px 5px 25px black, 2px 8px 2px grey;
+}
+.box h1 {
+
+  padding: 30px 0 0px;
+  text-align: center;
+  font-size: 30px;
+}
+.box label {
+  position: relative;
+  margin: 5px;
+  padding: 0;
+  font-weight: bold;
+  
+}
+.box input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.box input[type="text"], .login-box input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 13px;
+}
+.login-box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #b80f22;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+.box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: black;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+.box .in:hover {
+  color: #fff;
+}
+.box .date{
+	width: 155px;
+  margin-left: 45px;
+}
+.ben{
+ 
+  display: flex;
+  height: 44px;
+  font-size: 1px;
+  width: 100%;
+
+}
+.ben input[type="date"]{
+  height: 20px;
+}
+.con{
+  display: grid;
+  margin: 5px;
+  margin-left: 15px;
+  width: 50%;
+  
+}
+.cuerpo_fecha{
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  margin: 0 auto;
+}
+.cuerpo_fecha input{
+  margin: 10px;
+  height: 20px;
+}
+.contrato{
+  width: 20%;
+}
+.area_dolares{
+  display: flex;
+
+}
+.ad{
+  display: grid;
+  width: 50%;
+  margin-right: 10px;
+}
+.linea .cuerpo_fecha .anotar{
+  border: none;
+  height: 15px;
+  width: 40%;
+  display: block;
+  margin-left: 20px;
+}
+.bot{
+  
+  border: 1px solid #fff;
+  color: white;
+  border-radius: 25px;
+  width: 850px;
+  padding: 10px;  
+  text-decoration: none;
+
+}
+.bot:hover{
+  background: white;
+  color: rgb(43,80,122);
+  cursor: pointer;
+}
+/*tipo de contrato
+22 39 51 cuota mensual anual
+*/
+
+.formulario .tc .tc_i{
+  width: 10px;
+  margin: 25px auto;
+  padding: 1em 5%;
+
+  display: inline;
+}
+fieldset .lb{
+  margin-right: 55px;
+}
+.field2{
+  padding: 20px;
+}
+
+.field3{
+  padding: 20px;
+  padding-top: 25px;
+
+}
+.dni{
+  height: 60px;
+}
+.nya{
+  height: 70px;
+}
+
+.flecha{
+  
+}

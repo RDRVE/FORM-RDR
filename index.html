@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div  class="box" >
+	<form class="formulario" id="my-table-id" >
+		<img align="right" width="90" height="40" style="position: relative;text-shadow: 5px 5px 10px black;text-align: center;\" src="riberadelrio.png">
+		<h1>Formulario</h1>
+		<div style="width: 200px;">
+			<input type="text" name="" disabled value="Fecha Actual" style="border-bottom: 0;">
+			<input type="date" name="" id="fecha_actual">
+		</div>
+		
+		<div class="tc">
+	    <fieldset>
+	        <legend>Tipo de Contrato</legend>
+
+	        <label style="margin-right: 50px;">
+	            <input class="tc_i" id="radio2"  type="radio" name="color"  checked> Pago Anual (20%)
+	        </label>
+
+	        <label>
+	            <input class="tc_i" id="radio3"  type="radio" name="color" > Pago Mensual(20%)
+	        </label>
+	        <br>
+	        <label style="margin-right: 50px;"> 
+	          <input class="tc_i" id="radio1"  type="radio" name="color" > Pago Anual(30%)
+	        </label>
+	        <label>
+	            <input class="tc_i" id="radio6"  type="radio" name="color" > Pago Mensual(30%)
+	        </label>
+	        
+	        <br>
+	        <label style="margin-right: 50px;">
+	            <input class="tc_i" id="radio4"  type="radio" name="color" > Pago Anual(50%)
+	        </label>
+	        
+	        <label>
+	            <input class="tc_i" id="radio7"  type="radio" name="color" > Pago Mensual(50%)
+	        </label>
+	        <br>
+			<label style="margin-right: 50px;">
+	            <input class="tc_i" id="radio5"  type="radio" name="color" > Pago Anual(100%)
+	        </label>
+	        
+	        
+	        <label>
+	            <input class="tc_i" id="radio8"  type="radio" name="color" > Pago Mensual(100%)
+	        </label>
+	    </fieldset>
+		</div>
+		
+
+		<center>
+			
+			
+		</center>
+
+	<fieldset class="field2">
+		 <legend>Datos Personales</legend>
+		<div style="position: relative;"  class="linea contrato" >
+		
+		</div>
+		<div class="linea nya">
+			<label>Nombres Y Apellidos</label>
+			<input id="nombres" type="text" >	<br>
+		</div>
+		
+		<div class="linea dni">
+			<label>Dni</label>
+			<input id="dni" type="text" >	<br>
+		</div>
+		<div class="linea">
+			<label>Estado Civil</label>
+			<select id="estado_civil">
+			  <option value="1">Soltero(a)</option>
+			  <option value="2">Casado(a)</option>
+			  <option value="3">Viudo(a)</option>
+			  <option value="4">Divorciado(a)</option>
+			</select>
+		</div>
+		
+		<div class="linea">
+			<label>Domicilio</label>
+			<input id="domicilio" type="text">	
+		</div>
+		<div class="linea">
+			<label>Distrito</label>
+			<input id="distrito" type="text" >	
+		</div>
+	</fieldset>
+
+	<fieldset class="field3 ">
+		<legend>Contrato</legend>
+		<div class="linea">
+			<label>Nº Contrato</label>
+			<input id="num_contrato" type="text" name="Contrato"><br>
+		</div>
+		
+		<div class="linea">
+				<div class="cuerpo_fecha">
+					<label style="margin-left: 11px;">Fecha de Inicio: </label>
+					<input id="fecha" type="date" class="date"   >
+					<input id="anotar" type="text" class="anotar">
+				</div>
+				<div class="cuerpo_fecha">
+					<label style="margin-left: 11px;">Fecha de Fin: </label>
+					<input id="fecha_fin" type="date" class="date"  >
+
+				</div>
+				<div class="linea">
+					<label>Duracion</label>
+				<input id="duracion" type="text" >	
+				</div>
+			</div>
+	<div class="linea">
+		<label>Membresia</label>
+		<select id="membresia">
+		  <option value="1">Clásica</option>
+		  <option value="2">Dorada</option>
+		  <option value="3">Premium</option>
+		</select>
+	</div>
+	<div class="linea">
+		<label>Pago Concepto de Mantenimiento</label>
+		<input type="text" name="" id="pago_mantenimiento">
+	</div>
+	<div class="linea">
+		<br>
+		<label> Porcentaje de Renovación %</label>
+		<input id="renovacion_procentaje" type="text"  placeholder="%">	
+	</div>
+	<div class="linea">
+		<div class="area_dolares">
+			<div class="ad 1">
+				<label>Monto $ (Dolares)</label>
+				<input id="monto_dolares" type="text" onKeyUp="cambio_a_soles(),fun()" onClick="api_tipo_cambio()">
+			</div>
+			<div class="ad 2">
+				<label>Tipo de Cambio</label>
+				<input id="tipo_cambio" type="text" onKeyUp="cambio_a_soles()" >
+			</div>
+		</div>
+		
+	</div>
+	<div class="linea" >
+		<label>Monto S/. (Soles)</label>
+		<input id="monto_soles" type="text" onClick="cambio_a_soles()" onkeyUp="">
+		<input style="border-bottom: none;" id="resp" type="text" name="">	
+	</div>
+	<div class="linea">
+		<label>% Max de Financiamiento</label>
+		<input id="max_financiamiento_porcentaje" type="text" onMouseLeave="calc()" onKeyUp="calc()">	
+
+
+	</div>
+	<!--
+	<div class="linea">
+		<label>Nº Cuotas</label>
+		<select id="num_cuotas"  name="Cuotas">
+		  <option selected="">Por favor, elija una opción</option>
+		  <option value="1">Al contado</option>
+		  <option value="2">3</option>
+		  <option value="3">6</option>
+		  <option value="4">12</option>
+		  <option value="5">18</option>
+		  <option value="6">24</option>
+		</select>
+
+	</div>
+-->
+	<div class="linea">
+		<label>% de la Cuota inicial</label>
+		<input id="cuota_inicial"  type="text" >	
+
+	</div>
+
+<!--
+	
+	<div class="linea">
+		<label>Fecha primera cuota</label>
+		<input type="text" name="" id="diaPrimerCuota" placeholder="Dia Ejem: 01">
+		<input type="text" name="" id="mesPrimerCuota" placeholder="Mes Ejem: Enero">
+		<input type="text" name="" id="anioPrimerCuota" placeholder="Año Ejem: 2018">
+	</div>
+-->
+	</fieldset>
+
+	<fieldset class="">
+		<legend>  Pagares</legend>
+		<div class="linea">
+		<label>Numero de Pagares</label>
+		<select id="num_pagares" >
+			<option value="1" selected>1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		</div>
+<!--
+		<div class="ben">
+			<div class="con">
+			<input type="text" name="" value="% Tasa Anual"
+			disabled style="border-bottom: 0;text-align: right;">
+			</div>
+
+			<div class="con">
+			<input type="text" name="" id="tasa_anual">
+			</div>
+			<div class="con">
+			<br>
+			</div>
+		</div>-->
+		<br>
+		<label for= "firstPay" id="firstPayl">Primer Pagare</label >
+		<div class="ben" id="firstPay" >
+		
+		
+			<div class="con">
+			<input id="monto_pagare1" type="text"  placeholder="Monto en Dolares"><br>
+			</div>
+			
+			<div class="con">
+
+			<input id="fecha_pagare1" type="date"  ><br>
+			</div>
+			<div class="con">
+				<input type="text" name="" id="cuotas_pagare1" placeholder="Numero de Cuotas"><br>
+			</div>
+			<div class="con">
+				<input type="text" name=""  placeholder="% Tasa Anual" id="tasa_anual_pagare1"><br>
+			</div>
+		</div>
+		<br>
+		<label for="secondPay" id="secondPayl" style="visibility: hidden;"> Segundo Pagare</label>
+		<div class="ben" id="secondPay"  style="visibility: hidden;">
+			
+			<div class="con">
+			<input id="monto_pagare2" type="text"  placeholder="Monto en Dolares"><br>
+			</div>
+			<div class="con">
+			<input id="fecha_pagare2" type="date"  ><br>
+			</div>
+			<div class="con">
+				<input type="text" name="" id="cuotas_pagare2" placeholder="Numero de Cuotas"><br>
+			</div>
+			<div class="con">
+				<input type="text" name=""  placeholder="% Tasa Anual" id="tasa_anual_pagare2"><br>
+			</div>
+		</div>
+		<br>
+		<label for="thirdPay" id="thirdPayl" style="visibility: hidden;">Tercer Pagare</label>
+		<div class="ben" id="thirdPay"  style="visibility: hidden;">
+		
+		
+			<div class="con">
+			<input id="monto_pagare3" type="text" placeholder="Monto en Dolares"><br>
+			</div>
+			<div class="con">
+			<input id="fecha_pagare3" type="date"  ><br>
+			</div>
+			<div class="con">
+				<input type="text" name="" id="cuotas_pagare3" placeholder="Numero de Cuotas"><br>
+			</div>
+			<div class="con">
+				<input type="text" name="" placeholder="% Tasa Anual"  id="tasa_anual_pagare3"><br>
+			</div>
+		</div>
+		<br> 
+		<label for="fourthPay" id="fourthPayl" style="visibility: hidden;">Cuarto Pagare</label>
+		<div class="ben" id="fourthPay" style="visibility: hidden;">
+		
+		
+			<div class="con">
+			<input id="monto_pagare4" type="text"  placeholder="Monto en Dolares"><br>
+			</div>
+			<div class="con">
+			<input id="fecha_pagare4" type="date"  ><br>
+			</div>
+			<div class="con">
+				<input type="text" name="" id="cuotas_pagare4" placeholder="Numero de Cuotas"><br>
+			</div>
+			<div class="con">
+				<input type="text" name=""  placeholder="% Tasa Anual" id="tasa_anual_pagare4"><br>
+			</div>
+		</div>
+		<br>
+		<label for="fivePay" id="fivePayl" style="visibility: hidden;">Quinto Pagare</label>
+		<div class="ben" id="fivePay" style="visibility: hidden;">
+		
+			<div class="con">
+			<input id="monto_pagare5" type="text"  placeholder="Monto en Dolares"><br>
+			</div>
+			<div class="con">
+			<input id="fecha_pagare5" type="date"  ><br>
+			</div>
+			<div class="con">
+				<input type="text" name="" id="cuotas_pagare5" placeholder="Numero de Cuotas"><br>
+			</div>
+			<div class="con">
+				<input type="text" name="" placeholder="% Tasa Anual"  id="tasa_anual_pagare5"><br>
+			</div>
+		</div>
+	</fieldset>
+
+
+	
+	<fieldset class="field4" >
+
+		<legend >Beneficiarios</legend>
+		
+		<input type="button" name="" id="aparecer_ben" value="Agregar" style="width: 70px;height: 30px;">
+		<div id="list_eneficiarios" >
+		<div class="linea">
+	
+		<div class="ben">
+			<div class="con">
+				<!-- <label>Nombre:</label> -->
+			<input type="text" id="ben_nombre1" name=""  placeholder="Nombre">
+			</div>
+			<div class="con">
+<!-- 				<label>Fecha de Nac.: </label>
+ -->			<input type="date" id="ben_fecha1" name="" placeholder="Fecha de Nac.">
+			</div>
+			<div class="con">
+<!-- 				<label>Grado de Parentesco</label> -->
+			<input type="text" id="ben_parentesco1" name="" placeholder="Parentesco">
+			</div>
+		</div>
+		<div class="ben">
+			<div class="con">
+				<!-- <label>Nombre:</label> -->
+			<input type="text" id="ben_nombre2" name=""  placeholder="Nombre">
+			</div>
+			<div class="con">
+<!-- 				<label>Fecha de Nac.: </label>
+ -->			<input type="date" id="ben_fecha2" name="" placeholder="Fecha de Nac.">
+			</div>
+			<div class="con">
+<!-- 				<label>Grado de Parentesco</label> -->
+			<input type="text" id="ben_parentesco2" name="" placeholder="Parentesco">
+			</div>
+		</div>
+		<div class="ben">
+			<div class="con">
+				<!-- <label>Nombre:</label> -->
+			<input type="text" id="ben_nombre3" name=""  placeholder="Nombre">
+			</div>
+			<div class="con">
+<!-- 				<label>Fecha de Nac.: </label>
+ -->			<input type="date" id="ben_fecha3" name="" placeholder="Fecha de Nac.">
+			</div>
+			<div class="con">
+<!-- 				<label>Grado de Parentesco</label> -->
+			<input type="text" id="ben_parentesco3" name="" placeholder="Parentesco">
+			</div>
+		</div>
+		<div class="ben">
+			<div class="con">
+				<!-- <label>Nombre:</label> -->
+			<input type="text" id="ben_nombre4" name=""  placeholder="Nombre">
+			</div>
+			<div class="con">
+<!-- 				<label>Fecha de Nac.: </label>
+ -->			<input type="date" id="ben_fecha4" name="" placeholder="Fecha de Nac.">
+			</div>
+			<div class="con">
+<!-- 				<label>Grado de Parentesco</label> -->
+			<input type="text" id="ben_parentesco4" name="" placeholder="Parentesco">
+			</div>
+		</div>
+		<div class="ben">
+			<div class="con">
+				<!-- <label>Nombre:</label> -->
+			<input type="text" id="ben_nombre5" name=""  placeholder="Nombre">
+			</div>
+			<div class="con">
+<!-- 				<label>Fecha de Nac.: </label>
+ -->			<input type="date" id="ben_fecha5" name="" placeholder="Fecha de Nac.">
+			</div>
+			<div class="con">
+<!-- 				<label>Grado de Parentesco</label> -->
+			<input type="text" id="ben_parentesco5" name="" placeholder="Parentesco">
+			</div>
+		</div>
+		<div class="ben">
+			<div class="con">
+				<!-- <label>Nombre:</label> -->
+			<input type="text" id="ben_nombre6" name=""  placeholder="Nombre">
+			</div>
+			<div class="con">
+<!-- 				<label>Fecha de Nac.: </label>
+ -->			<input type="date" id="ben_fecha6" name="" placeholder="Fecha de Nac.">
+			</div>
+			<div class="con">
+<!-- 				<label>Grado de Parentesco</label> -->
+			<input type="text" id="ben_parentesco6" name="" placeholder="Parentesco"> 
+			</div>
+		</div>
+		<div class="ben">
+			<div class="con">
+				<!-- <label>Nombre:</label> -->
+			<input type="text" id="ben_nombre7" name=""  placeholder="Nombre">
+			</div>
+			<div class="con">
+<!-- 				<label>Fecha de Nac.: </label>
+ -->			<input type="date" id="ben_fecha7" name="" placeholder="Fecha de Nac.">
+			</div>
+			<div class="con">
+<!-- 				<label>Grado de Parentesco</label> -->
+			<input type="text" id="ben_parentesco7" name="" placeholder="Parentesco"> 
+			</div>
+		</div>
+		<div class="ben">
+			<div class="con">
+				<!-- <label>Nombre:</label> -->
+			<input type="text" id="ben_nombre8" name=""  placeholder="Nombre">
+			</div>
+			<div class="con">
+<!-- 				<label>Fecha de Nac.: </label>
+ -->			<input type="date" id="ben_fecha8" name="" placeholder="Fecha de Nac.">
+			</div>
+			<div class="con">
+<!-- 				<label>Grado de Parentesco</label> -->
+			<input type="text" id="ben_parentesco8" name="" placeholder="Parentesco"> 
+			</div>
+		</div>
+		<div class="ben">
+			<div class="con">
+				<!-- <label>Nombre:</label> -->
+			<input type="text" id="ben_nombre9" name=""  placeholder="Nombre">
+			</div>
+			<div class="con">
+<!-- 				<label>Fecha de Nac.: </label>
+ -->			<input type="date" id="ben_fecha9" name="" placeholder="Fecha de Nac.">
+			</div>
+			<div class="con">
+<!-- 				<label>Grado de Parentesco</label> -->
+			<input type="text" id="ben_parentesco9" name="" placeholder="Parentesco"> 
+			</div>
+		</div>
+		<div class="ben">
+			<div class="con">
+				<!-- <label>Nombre:</label> -->
+			<input type="text" id="ben_nombre10" name=""  placeholder="Nombre">
+			</div>
+			<div class="con">
+<!-- 				<label>Fecha de Nac.: </label>
+ -->			<input type="date" id="ben_fecha10" name="" placeholder="Fecha de Nac.">
+			</div>
+			<div class="con">
+<!-- 				<label>Grado de Parentesco</label> -->
+			<input type="text" id="ben_parentesco10" name="" placeholder="Parentesco"> 
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	</fieldset>
+		
+	
+	<br>
+	<br>
+	<center>
+	<div class="botones">
+		<a id="btnCertificado" class="word-export2" href="javascript:void(0)" style="
+		border: 1px solid #fff;
+  	color: white;
+  	border-radius: 25px;
+  	width: 850px;
+  	padding: 10px;  
+  	text-decoration: none;
+	
+	">Certificado</a>
+		<a class="bot pag" id="btnPagare" class="btn"  >Pagaré</a>
+		<a class="bot presd" id="btnPrestacionSer" class="btn">Prestacion de Servicios</a>
+	</div>
+	</center>
+
+
+</form>
+</div>
+<div id="page-content2" hidden>
+ <!--no borrar-->
+
+ <P><center><img src="logo.png" width="300px" height="150px"></center></P>
+</div>
+	<script src="./js/calculos.js"></script>
+	<script src="certificado/scrip.js"></script>
+	<script src="./js/jquery.min.js"></script> 
+  	<script src="./js/FileSaver.js"></script> 
+
+  	<script src="./js/numalet.js"></script>
+  
+  	<!--<script src="./js/jquery.wordexport.js"></script>--> 
+ 	<script src="./js/jquery.wordexport_cer.js"></script> 
+  
+  	<script type="text/javascript">
+      /*jQuery(document).ready(function($) {
+          $("a.word-export").click(function(event) {
+              $("#page-content").wordExport('VALLE_ENCANTADO');
+          });
+      });
+*/
+      jQuery(document).ready(function($) {
+          $("a.word-export2").click(function(event) {
+              $("#page-content2").wordExport2('CERTIFICADO');
+          });
+      });
+
+
+
+
+      </script>
+  <script type="text/javascript">
+
+   
+   
+
+document.getElementById("num_pagares").onchange=function(){
+	var cod = document.getElementById("num_pagares").value;
+
+	document.getElementById("firstPay").style.visibility="visible";
+	document.getElementById("secondPay").style.visibility="hidden";
+ 	document.getElementById("thirdPay").style.visibility="hidden";
+ 	document.getElementById("fourthPay").style.visibility="hidden";
+ 	document.getElementById("fivePay").style.visibility="hidden";
+
+ 	document.getElementById("firstPayl").style.visibility="visible";
+	document.getElementById("secondPayl").style.visibility="hidden";
+ 	document.getElementById("thirdPayl").style.visibility="hidden";
+ 	document.getElementById("fourthPayl").style.visibility="hidden";
+ 	document.getElementById("fivePayl").style.visibility="hidden";
+
+if(cod==2){
+
+ 	document.getElementById("secondPay").style.visibility ="visible";
+ 	document.getElementById("secondPayl").style.visibility ="visible";
+ 	
+ 	
+ }else if(cod==3) {
+
+ 	
+ 	document.getElementById("secondPay").style.visibility ="visible";
+ 	document.getElementById("thirdPay").style.visibility ="visible";
+
+ 	document.getElementById("secondPayl").style.visibility ="visible";
+ 	document.getElementById("thirdPayl").style.visibility ="visible";
+ 	
+ }else if(cod==4){
+ 	document.getElementById("secondPay").style.visibility ="visible";
+ 	document.getElementById("thirdPay").style.visibility ="visible";
+ 	document.getElementById("fourthPay").style.visibility ="visible";
+
+ 	document.getElementById("secondPayl").style.visibility ="visible";
+ 	document.getElementById("thirdPayl").style.visibility ="visible";
+ 	document.getElementById("fourthPayl").style.visibility ="visible";
+
+ }else if(cod==5){
+ 	document.getElementById("secondPay").style.visibility ="visible";
+ 	document.getElementById("thirdPay").style.visibility ="visible";
+ 	document.getElementById("fourthPay").style.visibility ="visible";
+ 	document.getElementById("firstPay").style.visibility ="visible";
+ 	document.getElementById("fivePay").style.visibility="visible";
+
+
+ 	document.getElementById("secondPayl").style.visibility ="visible";
+ 	document.getElementById("thirdPayl").style.visibility ="visible";
+ 	document.getElementById("fourthPayl").style.visibility ="visible";
+ 	document.getElementById("firstPayl").style.visibility ="visible";
+ 	document.getElementById("fivePayl").style.visibility="visible";
+
+ 	
+ }
+
+/*var combo = document.getElementById("num_pagares");
+var selected = combo.options[combo.selectedIndex].text;
+alert("elementoS:"+selected);*/
+
+
+}
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</body>
+</html>
