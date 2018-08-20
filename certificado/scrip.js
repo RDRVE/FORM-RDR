@@ -22,13 +22,18 @@ function isEmpty(str) {
 function fechaFormat(date){
     var format =  new Date(date);
 
-    return ((getDia(format)) + "/" + format.getMonth() + "/" + format.getYear());
+
+    return ((getDia(format)) + "/" + (getMes(format)) + "/" + format.getFullYear());
 }
 
 
 function getMes(date){
     var format =  new Date(date);
-    return format.getMonth();
+
+    if ((format.getMonth() + 1) < 10) {
+        return "0" + (format.getMonth() + 1).toString();
+    }
+    return (format.getMonth() + 1);
 }
 function getAnio(date){
     var format =  new Date(date);
@@ -36,10 +41,11 @@ function getAnio(date){
 }
 function getDia(date){
     
-    var format =  new Date(date);
+    var f = new Date(date);
 
+    f.setDate(f.getDate() + 1);
 
-    return "__"; 
+    return f.getDate(); 
 }
 
 function cambio(){
