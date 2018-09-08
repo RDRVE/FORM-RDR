@@ -452,7 +452,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + dateLarge(document.getElementById('fecha_actual').value) + ".</p>"
                         + "<br/><br/><br/>"
                         + "<p>______________________________________&#09;  &#09;_____________________________</p>"
-                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: ____________________<br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
+                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: <br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
                         + ""
 
 
@@ -1131,7 +1131,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + dateLarge(document.getElementById('fecha_actual').value) + ".</p>"
                         + "<br/><br/><br/>"
                         + "<p>______________________________________&#09;  &#09;_____________________________</p>"
-                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: ____________________<br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
+                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: <br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
                         + ""
 
 
@@ -2476,7 +2476,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + dateLarge(document.getElementById('fecha_actual').value) + ".</b></p>"
                         + "<br/><br/><br/>"
                         + "<p>______________________________________&#09;  &#09;_____________________________</p>"
-                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: ____________________<br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
+                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: <br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
                         + ""
 
 
@@ -3139,7 +3139,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + dateLarge(document.getElementById('fecha_actual').value) + ".</b></p>"
                         + "<br/><br/><br/>"
                         + "<p>______________________________________&#09;  &#09;_____________________________</p>"
-                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: ____________________<br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
+                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: <br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
                         + ""
 
 
@@ -3810,7 +3810,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + dateLarge(document.getElementById('fecha_actual').value) + ".</b></p>"
                         + "<br/><br/><br/>"
                         + "<p>______________________________________&#09;  &#09;_____________________________</p>"
-                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: ____________________<br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
+                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: <br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
                         + ""
 
 
@@ -4481,7 +4481,7 @@ document.getElementById('btnPrestacionSer').onclick = function() {
                         + dateLarge(document.getElementById('fecha_actual').value) + ".</p>"
                         + "<br/><br/><br/>"
                         + "<p>______________________________________&#09;  &#09;_____________________________</p>"
-                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: ____________________<br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
+                        + "<div>EL AFILIADO &#09;&#09;&#09;&#09;&#09; &#09;  DIRECTOR <br />Nombres y Apellidos: <br />" + document.getElementById('nombres').value.toUpperCase() + "</div>"
                         + ""
 
 
@@ -5785,6 +5785,8 @@ word = "<html "
 
 
     word += "<div style='font-size: 12pt;font-family:Calibri'><center><b> PAGARÉ N° <u>" 
+             + document.getElementById('num_contrato').value.toUpperCase()
+             + "-"
              + (i + 1) 
              + "</u></b></center></br></div>";
 
